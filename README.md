@@ -11,6 +11,3 @@ I am using this project as a learning opportunity for me to try out different sk
 
 ### There's not much code here. What's going on?
 This is an ongoing project, and because I have challenged myself to learn many new skills along the way, it may take more time. I will be trying to keep this repository as up-to-date as possible to show my progress!
-
-### Here from my resume? Welcome!
-Thanks for checking out this project, and I hope to talk to you in an interview soon!
