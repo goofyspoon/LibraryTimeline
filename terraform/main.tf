@@ -2,7 +2,7 @@ terraform {
   backend "s3" {
     bucket         = "terraform-current-state"
     key            = "librarytimeline/terraform.tfstate"
-    region         = "global"
+    region         = "us-east-2"
 
     # dynamodb_table = "terraform-current-locks"
     # encrypt        = true
@@ -24,6 +24,7 @@ provider "aws" {
 # Bucket to store terraform "up and running" state
 resource "aws_s3_bucket" "terraform_current_state" {
   bucket = "terraform-current-state"
+  region  = "us-east-2"
   # The following should be used to ensure there is no accidental deletion
   # For this project, enable deletion
   # lifecycle {
