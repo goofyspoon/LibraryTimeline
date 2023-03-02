@@ -1,7 +1,7 @@
 terraform {
   backend "s3" {
     bucket         = "terraform-current-state"
-    key            = "librarytimeline/terraform.tfstate"
+    key            = "global/s3/terraform.tfstate"
     region         = "us-east-2"
 
     # dynamodb_table = "terraform-current-locks"
