@@ -1,6 +1,6 @@
 terraform {
   backend "s3" {
-    bucket         = "terraform-current-state"
+    bucket         = aws_s3_bucket.terraform_current_state.name
     key            = "librarytimeline/terraform.tfstate"
     region         = "us-east-2"
 
