@@ -1,8 +1,7 @@
 terraform {
   backend "s3" {
-    bucket         = aws_s3_bucket.terraform_current_state.name
+    bucket         = "terraform-current-state"
     key            = "librarytimeline/terraform.tfstate"
-    region         = "us-east-2"
 
     # dynamodb_table = "terraform-current-locks"
     # encrypt        = true
