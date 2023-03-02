@@ -1,12 +1,12 @@
 terraform {
-  backend "s3" {
-    bucket         = "terraform-current-state"
-    key            = "global/s3/terraform.tfstate"
-    region         = "us-east-2"
+  # backend "s3" {
+  #   bucket         = "terraform-current-state"
+  #   key            = "global/s3/terraform.tfstate"
+  #   region         = "us-east-2"
 
-    dynamodb_table = "terraform-current-locks"
-    encrypt        = true
-  }
+  #   dynamodb_table = "terraform-current-locks"
+  #   encrypt        = true
+  # }
 }
 
 provider "aws" {
