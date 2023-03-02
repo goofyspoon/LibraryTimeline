@@ -1,12 +1,12 @@
 terraform {
-  # backend "s3" {
-  #   bucket         = "terraform-current-state"
-  #   key            = "global/s3/terraform.tfstate"
-  #   region         = "us-east-2"
+  backend "s3" {
+    bucket         = "terraform-current-state-library-timeline"
+    key            = "global/s3/terraform.tfstate"
+    region         = "us-east-2"
 
-  #   dynamodb_table = "terraform-current-locks"
-  #   encrypt        = true
-  # }
+    dynamodb_table = "terraform-current-locks"
+    encrypt        = true
+  }
 }
 
 provider "aws" {
@@ -15,12 +15,11 @@ provider "aws" {
 
 # Bucket to store terraform "up and running" state
 resource "aws_s3_bucket" "terraform_current_state" {
-  bucket = "terraform-current-state"
+  bucket = "terraform-current-state-library-timeline"
   # The following should be used to ensure there is no accidental deletion
-  # For this project, enable deletion
-  # lifecycle {
-  #   prevent_destroy = true
-  # }
+  lifecycle {
+    prevent_destroy = true
+  }
 }
 
 # Enable versioning on the s3 bucket
