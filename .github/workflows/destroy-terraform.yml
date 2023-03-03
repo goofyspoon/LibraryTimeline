@@ -48,6 +48,17 @@ jobs:
     # Checks that all Terraform configuration files adhere to a canonical format
     - name: Terraform Format
       run: terraform fmt
+      
+    # Lists all resources
+    - name: Terraform List State
+      run: terraform state list
+      
+    # Remove backend s3 bucket from list state
+    - name: Terraform State Remove
+      run: terraform state rm aws_s3_bucket.terraform_current_state
+        aws_s3_bucket_public_access_block.public_access
+        aws_s3_bucket_server_side_encryption_configuration.default
+        aws_s3_bucket_versioning.enabled
 
     # Destroys all Terraform resources
     - name: Terraform Destroy
