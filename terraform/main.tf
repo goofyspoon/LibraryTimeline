@@ -1,7 +1,7 @@
 terraform {
   backend "s3" {
     bucket         = "terraform-current-state-library-timeline"
-    key            = "global/s3/terraform.tfstate"
+    key            = "backend/terraform.tfstate"
     region         = "us-east-2"
 
     dynamodb_table = "terraform-current-locks"
@@ -17,6 +17,7 @@ provider "aws" {
 resource "aws_s3_bucket" "terraform_current_state" {
   bucket = "terraform-current-state-library-timeline"
   # The following should be used to ensure there is no accidental deletion
+  # For this project, enable deletion
   lifecycle {
     prevent_destroy = true
   }
