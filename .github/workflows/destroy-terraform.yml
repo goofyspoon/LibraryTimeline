@@ -4,8 +4,7 @@ name: 'Destroy Terraform'
 
 on:
   schedule:
-    # * is a special character in YAML so you have to quote this string
-    - cron:  '0 0 22 ? * * *'
+    - cron: '0 22 * * *'
   workflow_dispatch:
 
 permissions:
