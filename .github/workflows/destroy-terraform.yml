@@ -1,6 +1,6 @@
 # This workflow installs the latest version of Terraform CLI and AWS Credentials. At 10 pm, this workflow will destroy all destroyable resources.
 
-name: 'Terraform'
+name: 'Destroy Terraform'
 
 on:
   schedule:
