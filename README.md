@@ -14,7 +14,7 @@ This is an ongoing project, and because I have challenged myself to learn many n
 
 ### Status
 - [x] Create Terraform Backend using AWS S3 and DynamoDB
-- [ ] Clean Training Data to be usable for predictions
+- [x] Clean Training Data to be usable for predictions
 - [ ] Set up Database with Terraform
 - [ ] Create a baseline using naive scoring algorithm
 - [ ] Experiment with Greedy algorithms via Python and Scikit-learn
